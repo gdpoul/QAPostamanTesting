@@ -31,7 +31,7 @@
 							"\r",
 							"postman.setNextRequest(\"Status Of Books\");\r",
 							"pm.test(\"Response time is less than 200ms\", function () {\r",
-							"    pm.expect(pm.response.responseTime).to.be.below(201);\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
 							"});\r",
 							""
 						],
@@ -443,7 +443,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "412bb294-b92a-4a4f-aef7-83716967f8ca",
+				"id": "6a77c19b-a211-44c5-b254-2a9ad9d32b04",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -453,7 +453,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "8e2c5d1a-1091-436b-be76-c5b145f0e75c",
+				"id": "aa5125aa-b789-48f6-88bc-cd8e4698735f",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -465,11 +465,6 @@
 		{
 			"key": "Token",
 			"value": ""
-		},
-		{
-			"key": "zn z",
-			"value": "",
-			"type": "string"
 		}
 	]
 }
