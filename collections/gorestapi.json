@@ -23,8 +23,8 @@
 							"})\r",
 							"\r",
 							"pm.test('validate the responseBody', ()=>{\r",
-							"    pm.expect(jsonData.name).to.eql(pm.environment.get(\"name_env\"));\r",
-							"    pm.expect(jsonData.email).to.eql(pm.environment.get(\"email_env\"));\r",
+							"    pm.expect(jsonData.name).to.eql(pm.variables.get(\"name_env\"));\r",
+							"    pm.expect(jsonData.email).to.eql(pm.variables.get(\"email_env\"));\r",
 							"    pm.expect(jsonData.gender).to.eql(\"male\");\r",
 							"    pm.expect(jsonData.status).to.eql(\"inactive\");\r",
 							"})\r",
@@ -44,8 +44,8 @@
 							"\r",
 							"var userName=\"All\"+random;\r",
 							"var userEmail=\"all\"+random+\"@gmail.com\";\r",
-							"pm.environment.set(\"name_env\",userName);\r",
-							"pm.environment.set(\"email_env\",userEmail);\r",
+							"pm.variables.set(\"name_env\",userName);\r",
+							"pm.variables.set(\"email_env\",userEmail);\r",
 							""
 						],
 						"type": "text/javascript"
@@ -131,8 +131,8 @@
 							"\r",
 							"var userName=\"All\"+random;\r",
 							"var userEmail=\"all\"+random+\"@gmail.com\";\r",
-							"pm.environment.set(\"name_env\",userName);\r",
-							"pm.environment.set(\"email_env\",userEmail);"
+							"pm.variables.set(\"name_env\",userName);\r",
+							"pm.variables.set(\"email_env\",userEmail);"
 						],
 						"type": "text/javascript"
 					}
@@ -145,9 +145,9 @@
 							"\r",
 							"pm.test(\"validate the updated user fields\", () =>{\r",
 							"    var jsonData=pm.response.json();\r",
-							"    pm.expect(jsonData.id).eql(pm.environment.get(\"userid_env\"));\r",
-							"    pm.expect(jsonData.name).eql(pm.environment.get(\"name_env\"));\r",
-							"    pm.expect(jsonData.email).eql(pm.environment.get(\"email_env\"));\r",
+							"    pm.expect(jsonData.id).eql(pm.collectionVariables.get(\"userid_env\"));\r",
+							"    pm.expect(jsonData.name).eql(pm.variables.get(\"name_env\"));\r",
+							"    pm.expect(jsonData.email).eql(pm.variables.get(\"email_env\"));\r",
 							"    pm.expect(jsonData.status).eql(\"active\");\r",
 							"});\r",
 							"postman.setNextRequest('Delete User');"
@@ -184,9 +184,9 @@
 					"script": {
 						"id": "cf13b938-e0ce-4142-b875-033908aa793c",
 						"exec": [
-							"pm.environment.unset(\"name_env\");\r",
-							"pm.environment.unset(\"email_env\");\r",
-							"pm.environment.unset(\"userid_env\");\r",
+							"pm.variables.unset(\"name_env\");\r",
+							"pm.variables.unset(\"email_env\");\r",
+							"pm.collectionVariables.unset(\"userid_env\");\r",
 							"\r",
 							"pm.test(\"Validate status Code\",()=>{\r",
 							"    pm.response.to.have.status(204);\r",
