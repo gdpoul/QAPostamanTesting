@@ -443,7 +443,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "5d1adad0-f654-4f6d-9144-a2334f97226c",
+				"id": "dde9b96d-36f7-4d98-bad9-c412ffd55a20",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -453,7 +453,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "6e92104b-daea-4ee0-b4ff-dc063bd640fd",
+				"id": "220d7772-1d4c-4aa8-a8c3-1304876b276a",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -465,11 +465,6 @@
 		{
 			"key": "Token",
 			"value": ""
-		},
-		{
-			"key": "xcsvfn",
-			"value": "qq",
-			"type": "string"
 		}
 	]
 }
